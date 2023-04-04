@@ -33,7 +33,7 @@ export class CeloProvider extends providers.JsonRpcProvider {
     signedTransaction: string | Promise<string>
   ): Promise<providers.TransactionResponse> {
     await this.getNetwork();
-    const signedTx = await Promise.resolve(signedTransaction);
+    const signedTx = await signedTransaction;
     const hexTx = utils.hexlify(signedTx);
     const tx = parseCeloTransaction(signedTx);
     try {
