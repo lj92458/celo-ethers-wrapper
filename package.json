@@ -1,6 +1,6 @@
 {
   "name": "@lj92458/celo-ethers-wrapper",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A minimal wrapper to make Ethers.JS compatible with the Celo network. I have added function fromEncryptedJson and fromEncryptedJsonSync to CeloWallet.ts",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
