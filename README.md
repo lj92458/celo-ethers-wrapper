@@ -1,14 +1,14 @@
 # celo-ethers-wrapper
 
-A minimal wrapper to make Ethers.JS compatible with the Celo network.
+A minimal wrapper to make Ethers.JS compatible with the Celo network. I have added function fromEncryptedJson and fromEncryptedJsonSync to CeloWallet.ts
 
 ## Install
 
-`npm i @celo-tools/celo-ethers-wrapper`
+`npm i @lj92458/celo-ethers-wrapper`
 
 or
 
-`yarn add @celo-tools/celo-ethers-wrapper`
+`yarn add @lj92458/celo-ethers-wrapper`
 
 Note this wrapper has Ethers v5 as a peer dependency. Your project must include a dependency on that as well.
 
@@ -17,7 +17,7 @@ Note this wrapper has Ethers v5 as a peer dependency. Your project must include 
 Connect to the network by creating a `CeloProvider`, which is based on [JsonRpc-Provider](https://docs.ethers.io/v5/api/providers/jsonrpc-provider/):
 
 ```js
-import { CeloProvider } from '@celo-tools/celo-ethers-wrapper'
+import { CeloProvider } from '@lj92458/celo-ethers-wrapper'
 
 // Connecting to Alfajores testnet
 const provider = new CeloProvider('https://alfajores-forno.celo-testnet.org')
@@ -29,7 +29,7 @@ Note: for a more efficient provider based on [StaticJsonRpcProvider](https://doc
 Next, Create a CeloWallet, which is based on [Wallet](https://docs.ethers.io/v5/api/signer/#Wallet) :
 
 ```js
-import { CeloWallet } from '@celo-tools/celo-ethers-wrapper'
+import { CeloWallet } from '@lj92458/celo-ethers-wrapper'
 
 const wallet = new CeloWallet(YOUR_PK, provider)
 ```
@@ -89,7 +89,7 @@ const txResponse = await signer.sendTransaction({
 You can also rely on EthersProviders functionality, such as getting an account's transaction history, using our alternative CeloscanProvider
 
 ```js
-import { CeloscanProvider } from '@celo-tools/celo-ethers-wrapper'
+import { CeloscanProvider } from '@lj92458/celo-ethers-wrapper'
 
 // You can use 'celo', 'alfajores' or 'baklava'.
 // Default is 'celo' (mainnet)

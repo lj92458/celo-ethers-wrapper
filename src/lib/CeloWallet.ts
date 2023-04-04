@@ -118,7 +118,7 @@ export class CeloWallet extends Wallet {
 
     /**
      * Override to support alternative gas currencies
-     * https://github.com/celo-tools/ethers.js/blob/master/packages/abstract-signer/src.ts/index.ts
+     * https://github.com/lj92458/ethers.js/blob/master/packages/abstract-signer/src.ts/index.ts
      */
     async getGasPrice(feeCurrencyAddress?: string): Promise<BigNumber> {
         this._checkProvider("getGasPrice");
